@@ -1,0 +1,172 @@
+:root {
+  --transition: all 0.3s linear;
+  --clr-white: #fff;
+  --clr-yellow: #f1c40f;
+  --clr-gray: #313335;
+  --font-fam-Actor: "Actor", sans-serif;
+  --font-fam-Poppins: "Poppins", sans-serif;
+}
+
+.main .about-section {
+  display: grid;
+  grid-template-rows: 100px;
+}
+.main .about-section h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-family: var(--font-fam-Poppins);
+  color: var(--clr-gray);
+}
+.main .about-text-container {
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+  margin-left: auto;
+  margin-right: auto;
+  gap: 150px;
+}
+.main .about-text-container > div h3 {
+  text-transform: capitalize;
+  font-family: var(--font-fam-Poppins);
+  color: var(--clr-gray);
+}
+.main .about-text-container > div i {
+  font-size: 30px;
+  color: var(--clr-yellow);
+  margin-right: 10px;
+  float: left;
+  line-height: 80px;
+  text-align: center;
+  border: 1px solid var(--clr-yellow);
+  height: 80px;
+  width: 80px;
+  margin-left: -100px;
+}
+.main .about-text-container > div p {
+  text-transform: capitalize;
+  font-family: var(--font-fam-Poppins);
+  color: var(--clr-gray);
+}
+
+.main .about-text-wrapper-extension {
+  background: url("pexels-olya-kobruseva-4553668.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 200px;
+  margin-top: 50px;
+  text-align: center;
+}
+.main .about-text-wrapper-extension h1 {
+  text-transform: capitalize;
+  font-family: var(--font-fam-Poppins);
+  color: var(--clr-white);
+}
+.main .about-text-wrapper-extension button {
+  padding: 15px;
+  width: 200px;
+  text-transform: capitalize;
+  margin-top: 30px;
+  background: none;
+  border: 1px solid var(--clr-white);
+  color: var(--clr-white);
+  font-family: var(--font-fam-Poppins);
+  font-size: 18px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.main .about-text-wrapper-extension button:hover {
+  transition: var(--transition);
+  background: var(--clr-yellow);
+  border: none;
+}
+/************************************************Laptop view - L***************************************************/
+@media (max-width: 1366px) {
+  .main .about-text-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/************************************************Tablet view - L***************************************************/
+@media (max-width: 920px) {
+  .main .about-text-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 400px));
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+  }
+  .main .about-text-wrapper-extension button {
+    padding: 5px;
+    width: 150px;
+    margin-top: -5px;
+  }
+}
+/************************************************Mobile view - L***************************************************/
+@media (max-width: 520px) {
+  .main .about-text-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+
+  .main .about-text-container > div i {
+    margin-top: 20px;
+  }
+  .main .about-text-container > div h3 {
+    justify-content: flex-end;
+    margin-left: 50px;
+  }
+  .main .about-text-container > div p {
+    width: 200px;
+    justify-content: flex-end;
+    margin-left: 50px;
+  }
+  .main .about-text-wrapper-extension {
+    height: 200px;
+  }
+  .main .about-text-wrapper-extension h1 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .main .about-text-wrapper-extension button {
+    padding: 10px;
+    width: 150px;
+    margin-top: 13px;
+  }
+}
+/************************************************Mobile view - S***************************************************/
+@media (max-width: 320px) {
+  .main .about-text-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0;
+  }
+  .main .about-text-container > div h3 {
+    justify-content: flex-end;
+    margin-left: 80px;
+  }
+  .main .about-text-container > div i {
+    margin-top: 20px;
+    margin-left: -70px;
+  }
+  .main .about-text-container > div p {
+    width: 200px;
+    justify-content: flex-end;
+    margin-left: 80px;
+  }
+  .main .about-text-wrapper-extension {
+    width: auto;
+    height: 230px;
+  }
+  .main .about-text-wrapper-extension h1 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .main .about-text-wrapper-extension button {
+    padding: 10px;
+    width: 150px;
+    margin-top: 13px;
+  }
+}

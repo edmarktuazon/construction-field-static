@@ -1,0 +1,128 @@
+:root {
+  --transition: all 0.3s linear;
+  --clr-white: #fff;
+  --clr-yellow: #f1c40f;
+  --clr-gray: #3a3a3a;
+  --font-fam-Poppins: "Poppins", sans-serif;
+}
+
+.main .contact-section {
+  display: grid;
+  grid-template-rows: 100px;
+  margin-top: 50px;
+}
+.main .contact-section h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .contact-section p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15px;
+  color: #808080;
+}
+
+.main .contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px #0000002f;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+.main .contact-form .form-group {
+  width: 100%;
+  margin-top: 20px;
+}
+.main .contact-form .form-group label {
+  color: var(--clr-gray);
+  font-family: var(--font-fam-Poppins);
+}
+.main .contact-form .form-group input,
+textarea {
+  width: 96%;
+  padding: 10px;
+  outline: none;
+  font-family: var(--font-fam-Poppins);
+  background: #f2f2f2;
+  border: none;
+  color: var(--clr-gray);
+}
+.main .contact-form button {
+  padding: 15px;
+  text-transform: capitalize;
+  background: var(--clr-yellow);
+  border: none;
+  transition: var(--transition);
+  color: var(--clr-white);
+  font-family: var(--font-fam-Poppins);
+  width: 200px;
+  margin-top: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.main #status {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.main #status.success {
+  background: none;
+  border: 2px solid var(--clr-yellow);
+  margin-bottom: 50px;
+  border-radius: none;
+  color: var(--clr-gray);
+  font-family: var(--font-fam-Poppins);
+}
+.main #status.error {
+  background: none;
+  border: 2px solid var(--clr-yellow);
+  margin-bottom: 50px;
+  color: #808080;
+  font-family: var(--font-fam-Poppins);
+  animation: status 20s ease forwards;
+  padding: 10px;
+  width: 500px;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .main .contact-form {
+    width: 300px;
+  }
+  .main .contact-section p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main .contact-section p {
+    text-align: center;
+  }
+  .main .contact-form {
+    width: 250px;
+  }
+}
